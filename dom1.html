@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing DOM</title>
+</head>
+<body>
+    <ul class="languages">
+        <li>python</li>
+    </ul>
+</body>
+<script>
+
+    //this function will traverse the whole tree and then append the child at the last it can create optimization issues in large scale projects
+    function addLang(lang){
+        const li1 = document.createElement('li');
+        li1.innerHTML = `${lang}`
+        document.querySelector('.languages').appendChild(li1)
+    }
+    addLang('JS');
+
+    //Optimised way it will directly append the child at last without traversing the whole tree.
+    function OptiLang(lang){
+        const li1 = document.createElement('li');
+        li1.appendChild(document.createTextNode(lang))
+        document.querySelector('.languages').appendChild(li1)
+    }
+    OptiLang('Typescript')
+</script>
+</html>
