@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="id">Stop</button>
+</body>
+<script>
+    const variable = function(){
+        console.log('Zaid Khannn');
+    }
+
+    const variable2 = function(){
+        document.querySelector('h1').innerHTML = 'changing the text'
+    } 
+    const variable3 = setTimeout(variable2,4000)
+
+    document.querySelector('#id').
+    addEventListener('click',function(){
+        clearInterval(variable3)
+        console.log('Stopped');
+        
+    })
+</script>
+</html>
