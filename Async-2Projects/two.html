@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Setinterval Practice
+    </h1>
+    <button id="start">Start</button>
+    <button id="end">End</button>
+</body>
+<script>
+    const variable = function(str){
+        console.log(str,Date.now());
+    }
+    
+    let variable2;
+    document.querySelector('#start').
+    addEventListener('click', function(){
+         variable2 = setInterval(variable,1000,'Hey')
+    })
+    document.querySelector('#end').
+    addEventListener('click', function(){
+        clearInterval(variable2)
+    })
+</script>
+</html>
